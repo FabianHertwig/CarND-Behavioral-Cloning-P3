@@ -3,6 +3,9 @@ model.h5
 
 train_images
 test_images
+backup
+linux_sim
+train_images.zip
 
 
 # Created by https://www.gitignore.io/api/jupyternotebook
