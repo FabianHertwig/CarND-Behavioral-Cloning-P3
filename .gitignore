@@ -1,11 +1,15 @@
 mac_sim.app
 model.h5
+train_images.zip
+model_v1_1.h5
+
 
 train_images
 test_images
+v1_1
 backup
 linux_sim
-train_images.zip
+
 
 
 # Created by https://www.gitignore.io/api/jupyternotebook
@@ -18,4 +22,4 @@ train_images.zip
 #   git rm -r .ipynb_checkpoints/
 #
 # End of https://www.gitignore.io/api/jupyternotebook
-model_v1_1.h5
+
