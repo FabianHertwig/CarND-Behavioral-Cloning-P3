@@ -18,3 +18,4 @@ train_images.zip
 #   git rm -r .ipynb_checkpoints/
 #
 # End of https://www.gitignore.io/api/jupyternotebook
+model_v1_1.h5
