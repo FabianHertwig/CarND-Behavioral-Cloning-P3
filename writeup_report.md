@@ -26,7 +26,7 @@ My project includes the following files:
 * **BehavioralCloning.ipynb** containing the script to create and train the model. I used a notebook instead of a python script because I think that improves the reproducibility.
 * drive.py for driving the car in autonomous mode, only removed the output to console from this file.
 * **model_v1_1.h5** containing a trained convolution neural network. This file is too big for the 100 MB github limit, so I uploaded it to amazon S3. It can be downloaded with this link: https://s3-eu-west-1.amazonaws.com/fabian.hertwig.carnddata/model_v1_1.h5
-* **v1_1.mp4** a video showing the car autonomously driving the trak. 
+* **v1_1.mp4** a video showing the car autonomously driving the trak.
 * **writeup_report.md** summarizing the results
 
 #### 2. Submission includes functional code
@@ -153,6 +153,14 @@ The model was tested by running it through the simulator and ensuring that the v
 The model used an adam optimizer, so the learning rate was not tuned manually.
 
 #### 4. Appropriate training data
+
+In the simulation three forward facing cameras are mounted on the cars windshield. One on the left, one in the center and one on the right. All three cameras are used to capture training data. But only the center camera is used to drive the car around the track. Also the steering angle is recorded for training.
+
+![camera images](./cameras.png)
+
+I trained the model using the center image and the recorded steering angle. I also used the left and right images and added (or subtracted) a constant of 0.2 to the steering angle for the left (and right) image. I also mirrored these images vertically and flipped the steering angle sign to add additional training data.
+
+The original images are sampled at 60fps, but I did not want to use too similar images. So I only read every third image and therefore reduced the samplerate to 20 fps.
 
 I drove two times around the track in the clockwise direction and two times in the counter clockwise direction and tried to stay in the middle of the track. I used the mouse to steer to generate better steering angles. Then I tried to capture some special situations, mostly when the car is at the very side of the track and is steered towards the center.
 
