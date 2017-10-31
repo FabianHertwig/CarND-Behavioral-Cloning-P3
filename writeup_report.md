@@ -26,6 +26,7 @@ My project includes the following files:
 * **BehavioralCloning.ipynb** containing the script to create and train the model. I used a notebook instead of a python script because I think that improves the reproducibility.
 * drive.py for driving the car in autonomous mode, only removed the output to console from this file.
 * **model_v1_1.h5** containing a trained convolution neural network. This file is too big for the 100 MB github limit, so I uploaded it to amazon S3. It can be downloaded with this link: https://s3-eu-west-1.amazonaws.com/fabian.hertwig.carnddata/model_v1_1.h5
+* **v1_1.mp4** a video showing the car autonomously driving the trak. 
 * **writeup_report.md** summarizing the results
 
 #### 2. Submission includes functional code
