@@ -1,7 +1,7 @@
 mac_sim.app
 model.h5
 train_images.zip
-model_v1_1.h5
+model_v*.h5
 
 
 train_images
